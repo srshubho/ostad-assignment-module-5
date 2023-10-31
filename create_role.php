@@ -1,7 +1,5 @@
 <?php
-require "auth.php";
 $rolesFile = 'roles.json';
-is_admin($auth['role']);
 
 $roles = file_exists($rolesFile) ? json_decode(file_get_contents($rolesFile), true) : [];
 
@@ -34,7 +32,7 @@ if (isset($_POST['create_role'])) {
         ];
         saveRoles($roles, $rolesFile);
 
-        header("Location: dashboard.php");
+        header("Location: role_management.php");
         exit();
     }
 }

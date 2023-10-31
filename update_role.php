@@ -1,4 +1,5 @@
 <?PHP
+
 $usersFile = 'users.json';
 
 $users = file_exists($usersFile) ? json_decode(file_get_contents($usersFile), true) : [];
@@ -19,7 +20,7 @@ if (isset($_POST['update_role'])) {
         $users[$email]['role'] = $role;
 
         saveUsers($users, $usersFile);
-        header("Location: rolemanagement.php");
+        header("Location: role_management.php");
         exit();
     }
 }

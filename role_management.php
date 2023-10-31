@@ -3,9 +3,7 @@ $usersFile = 'users.json';
 
 $users = file_exists($usersFile) ? json_decode(file_get_contents($usersFile), true) : [];
 require 'header.php';
-if (!$auth["role"] === "admin") {
-    header("Location: 401.php");
-}
+roleCheck();
 ?>
 
 <div class="bg-white p-8 rounded shadow-md w-full max-w-4xl flex-col alignself-center">
@@ -46,7 +44,8 @@ if (!$auth["role"] === "admin") {
                                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                             <a class="text-blue-500 hover:text-blue-700 mx-2"
                                                 href="update_form.php?email=<?php echo $user; ?>">Update</a>
-                                            <a class="text-red-500 hover:text-blue-700" href="#">Delete</a>
+                                            <a class="text-red-500 hover:text-blue-700"
+                                                href="delete.php?email=<?php echo $user; ?>">Delete</a>
                                         </td>
                                     </tr>
 

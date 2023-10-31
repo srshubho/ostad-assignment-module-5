@@ -3,6 +3,7 @@ include "header.php";
 if (isset($_GET['email'])) {
     $email = $_GET['email'];
 }
+roleCheck();
 ?>
 
 

@@ -1,4 +1,7 @@
-<?php include 'header.php'; ?>
+<?php
+include 'header.php';
+roleCheck();
+?>
 <div class="mt-6">
     <h2 class="text-xl font-semibold mb-2">Create New Role</h2>
     <form action="create_role.php" method="post" class="w-96">
