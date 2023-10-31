@@ -1,0 +1,12 @@
+{
+    "coder.srs@gmail.com": {
+        "username": "shihab",
+        "password": "$2y$10$azI216xGbDLnL4m1F2tmueOYgo8bwV.6.PzQ2t8q6dH.TWJaFh2JG",
+        "role": "admin"
+    },
+    "admin@gmail.com": {
+        "username": "admin",
+        "password": "$2y$10$azI216xGbDLnL4m1F2tmueOYgo8bwV.6.PzQ2t8q6dH.TWJaFh2JG",
+        "role": "admin"
+    }
+}
